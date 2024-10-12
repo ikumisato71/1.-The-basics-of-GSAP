@@ -12,8 +12,8 @@ gsap.to(box1, {
 
 gsap.from(box2, {
   x: -100,
-  duration: 2,
   backgroundColor: "red",
+  duration: 2,
 });
 
 gsap.fromTo(
@@ -27,6 +27,6 @@ gsap.fromTo(
     x: 0,
     opacity: 1,
     rotation: 360,
-    duration: 3,
+    duration: 2,
   }
 );
