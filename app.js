@@ -4,12 +4,12 @@ const box3 = document.querySelector(".js-box:nth-child(3)");
 const textAll = document.querySelectorAll(".js-text"); // h1とpタグにjs-textのクラスを付与して下さい。
 
 // click event
-box1.addEventListener("click", () => {
-  gsap.to(box1, {
-    autoAlpha: 0,
-    duration: 2,
-  });
-});
+// box1.addEventListener("click", () => {
+//   gsap.to(box1, {
+//     autoAlpha: 0,
+//     duration: 2,
+//   });
+// });
 
 // 1. stagger
 gsap.from(textAll, {
@@ -20,7 +20,7 @@ gsap.from(textAll, {
   duration: 0.4,
   stagger: {
     each: 0.6, //各アニメーションの間隔を指定します。
-    // from: "random", //最初のアニメーションの間隔をランダムにします。
+    from: "random", //最初のアニメーションの間隔をランダムにします。
   },
 });
 
@@ -41,15 +41,15 @@ gsap.from(textAll, {
 // });
 
 // 4. timeline
-// const TL = gsap.timeline({
-// 	defaults: {
-// 		duration: 0.5,
-// 		y: 30,
-// 	},
-// });
+const TL = gsap.timeline({
+  defaults: {
+    duration: 0.5,
+    y: 30,
+  },
+});
 
-// TL.from(box1, { autoAlpha: 0 })
-// 	.from(box2, { autoAlpha: 0 })
-// 	.from(box3, { autoAlpha: 0 })
-// 	.from("h1", { autoAlpha: 0 })
-// 	.from("p", { autoAlpha: 0 });
+TL.from(box1, { autoAlpha: 0 })
+  .from(box2, { autoAlpha: 0 })
+  .from(box3, { autoAlpha: 0 })
+  .from("h1", { autoAlpha: 0 })
+  .from("p", { autoAlpha: 0 });
