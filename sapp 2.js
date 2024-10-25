@@ -23,6 +23,23 @@ gsap.from(textAll, {
     from: "random", //最初のアニメーションの間隔をランダムにします。
   },
 });
+
+// 2. keyframes
+// gsap.to(box1, {
+// 	keyframes: [
+// 		{ duration: 0.3, x: 100 },
+// 		{ duration: 0.3, y: 100 },
+// 		{ duration: 0.3, x: 200 },
+// 	],
+// });
+
+// 3. set some values
+// gsap.set(box1, {
+// 	x: 100,
+// 	y: 100,
+// 	scale: 2,
+// });
+
 // 4. timeline
 const TL = gsap.timeline({
   defaults: {
@@ -33,6 +50,6 @@ const TL = gsap.timeline({
 
 TL.from(box1, { autoAlpha: 0 })
   .from(box2, { autoAlpha: 0 })
-  .from(box3, { autoAlpha: 0 });
-// .from("h1", { autoAlpha: 0 })
-// .from("p", { autoAlpha: 0 });
+  .from(box3, { autoAlpha: 0 })
+  .from("h1", { autoAlpha: 0 })
+  .from("p", { autoAlpha: 0 });
