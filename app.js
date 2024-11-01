@@ -4,13 +4,27 @@ const box3 = document.querySelector(".js-box:nth-child(3)");
 const textAll = document.querySelectorAll(".js-text"); // h1とpタグにjs-textのクラスを付与して下さい。
 const logo = document.querySelectorAll(".js-logo");
 
-// click event
+// 4. timeline
+const TL = gsap.timeline({
+  defaults: {
+    autoAlpha: 0,
+    y: 30,
+  },
+});
+
+TL.from(box1, { autoAlpha: 0 })
+  .from(box2, { autoAlpha: 0 })
+  .from(textAll, { autoAlpha: 1 })
+  .from(logo, { autoAlpha: 1 });
+
+// box3にクリックイベントを追加してアニメーションを実行する
 box3.addEventListener("click", () => {
   gsap.to(box3, {
     autoAlpha: 0,
     duration: 2,
   });
 });
+
 // 回転
 gsap.to(box2, {
   x: 100,
@@ -59,16 +73,3 @@ gsap.from(logo, {
   },
   // stagger: 0.05, // 0.02秒ごとに出現
 });
-// 4. timeline
-const TL = gsap.timeline({
-  defaults: {
-    autoAlpha: 1,
-    stagger: 0.5,
-  },
-});
-
-TL.from(box1, { autoAlpha: 1 })
-  .from(box2, { autoAlpha: 1 })
-  .from(box3, { autoAlpha: 1 })
-  .from(textAll, { autoAlpha: 1 })
-  .from(logo, { autoAlpha: 1 });
