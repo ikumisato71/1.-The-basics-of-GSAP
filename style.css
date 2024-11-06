@@ -15,23 +15,32 @@ body {
   justify-content: center;
   width: 100%;
   margin-top: 50px;
+  gap: 10px;
 }
 
 .box {
   display: block;
-  width: 200px;
-  height: 200px;
-  flex-shrink: 1;
-  margin: 20px;
-  border-radius: 10px;
+  background-color: #f1f1f1;
+  width: 8px;
+  height: 100px;
 }
 
-.box:nth-child(1) {
+.anim-box1 {
+  position: relative;
+}
+.anim-box2 {
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+/* .box:nth-child(1) {
 }
 .box:nth-child(2) {
 }
-
 .box:nth-child(3) {
+} */
+
+/* .box:nth-child(3) {
   animation: poyon 1.2s infinite;
 }
 @keyframes poyon {
@@ -53,7 +62,7 @@ body {
   100% {
     transform: scale(1, 1) translate(0%, 0%);
   }
-}
+} */
 
 /* .img1, .img2, .img3 {
     opacity: 0;
